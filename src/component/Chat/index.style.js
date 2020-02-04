@@ -8,8 +8,8 @@ export const Container = styled.div`
 `;
 
 export const Threepoint = styled.div`
-  width: 9%;
-  height: 80px;
+  width: 5%;
+  height: 30px;
   position: absolute;
   display:flex;
   background: #205c8b;
