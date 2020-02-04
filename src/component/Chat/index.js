@@ -6,7 +6,6 @@ import {
   Div,
   Nobutton,
   Container,
-  User,
   UserDiv
 } from './index.style';
 
