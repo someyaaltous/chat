@@ -49,11 +49,6 @@ export const Nobutton = styled.button`
   border-radius: 5px;
   margin-left: 1%;
 `;
-export const User = styled.img`
-  width: 5%;
-  border-radius: 55px;
-  height: 60px;
-`;
 export const Listmass = styled.p`
   width: 16%;
   height: 35px;

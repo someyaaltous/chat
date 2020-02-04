@@ -9,7 +9,6 @@ import {
   User,
   UserDiv
 } from './index.style';
-import user from '../../assest/user.png';
 
 class Chat extends Component {
   state = {
