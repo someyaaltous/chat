@@ -2,3 +2,84 @@ body{
   margin: 0;
   padding: 0;
 }
+@keyframes example {
+  from {left: 0px;}
+  to {left: 100px;}
+}
+@keyframes example2 {
+  from {left: 150px;}
+  to {left: 100px;}
+}
+@keyframes dot1 {
+  0% {width: 19px;height: 19px;}
+  33% {width: 26px;height: 26px;}
+  66% {width: 19px;height: 19px;}
+  100% {width: 19px;height: 19px;}
+
+}
+@keyframes dot2 {
+  0% {width: 19px;height: 19px;}
+  33% {width: 19px;height: 19px;}
+  66% {width: 26px;height: 26px;}
+  100% {width: 19px;height: 19px;}
+}
+@keyframes dot3 {
+  0% {width: 19px;height: 19px;}
+  33% {width: 19px;height: 19px;}
+  66% {width: 19px;height: 19px;}
+  100% {width: 26px;height: 26px;}
+}
+h1{
+  /* display:absolute; */
+  color: black;
+
+  /* height: 5px; */
+  /* font-size: 10px; */
+}
+.hh1{
+  top:33px;
+  /* display: none; */
+  position: absolute;
+  /* margin:10px; */
+  background: white;
+  height: 20px;
+  width: 20px;
+  left: 20px;
+  border-radius: 50%;
+  margin-left: 10px;
+  animation-name: dot1;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+
+}
+.hh2{
+  top:33px;
+  position: absolute;
+  background: white;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  margin-left: 10px;
+  left:40px;
+  animation-name: dot2;
+  animation-duration: 0.8s;
+  /* animation-delay: 0.8s; */
+  animation-iteration-count: infinite;
+
+}
+.hh3{
+  top:33px;
+  position: absolute;
+  /* margin:60px; */
+  background: white;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  margin-left: 10px;
+  left:60px;
+  animation-name: dot3;
+  animation-duration: 0.8s;
+  /* animation-delay: 0.8s; */
+  animation-iteration-count: infinite;
+
+}
