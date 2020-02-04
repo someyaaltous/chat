@@ -29,8 +29,7 @@ export const Div = styled.div`
   display: flex;
   margin-top: 11%;
     margin-left: 19%;
-    animation-name: example2;
-  animation-duration: 2s;
+    animation: example2 2s forwards;
 `;
 export const Yesbutton = styled.button`
   width: 9%;
@@ -68,6 +67,6 @@ export const UserDiv = styled.div`
   display: flex;
   margin-top: 4%;
   margin-left: 4%;
-  animation-name: example;
-  animation-duration: 2s;
+  animation: example 2s forwards;
+
 `;
