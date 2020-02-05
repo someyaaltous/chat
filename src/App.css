@@ -103,27 +103,27 @@ h1{
 
 }
 .image{
-  top:10px;
+  /* top:10px; */
   /* display: none; */
   position: absolute;
   /* margin:10px; */
   /* background: white; */
   /* height: 20px;
   width: 20px; */
-  left: 12px;
+  /* left: 12px; */
   /* border-radius: 50%; */
-  margin-left: 5px;
+  /* margin-left: 5px; */
   animation: imagee1 1.9s forwards;
 }
 .image1{
-  top:20px;
+  /* top:20px; */
   /* display: none; */
   position: absolute;
   /* margin:10px; */
   /* background: white; */
   /* height: 20px;
   width: 20px; */
-  left: 30px;
+  /* left: 30px; */
   /* border-radius: 50%; */
   /* margin-left: 5px; */
   animation: imagee2 1.9s forwards;
@@ -139,6 +139,6 @@ h1{
   /* left: 12px; */
   /* border-radius: 50%; */
   /* margin-left: 5px; */
-  margin-top: 30%;
+  /* margin-top: 30%; */
   animation: imagee3 1.9s forwards;
 }
