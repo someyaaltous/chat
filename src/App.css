@@ -2,6 +2,25 @@ body{
   margin: 0;
   padding: 0;
 }
+@keyframes imagee1{
+  0% {top: 100px;opacity: 0; }
+  33% {top: 0px;}
+  66% {top: 0px;}
+  100% {top:0px;}
+
+}
+@keyframes imagee2{
+  0% {top: 150px;  opacity: 0;  }
+  33% {top: 150px;opacity: 0; }
+  66% {top: 0px;}
+  100% {top:0px;}
+}
+@keyframes imagee3{
+  0% {top: 200px;opacity: 0; }
+  33% {top: 200px;opacity: 0; }
+  66% {top: 200px;opacity: 0; }
+  100% {top:0px;}
+}
 @keyframes example {
   from {left: 0px;}
   to {left: 100px;}
@@ -82,4 +101,44 @@ h1{
   /* animation-delay: 0.8s; */
   animation-iteration-count: infinite;
 
+}
+.image{
+  top:10px;
+  /* display: none; */
+  position: absolute;
+  /* margin:10px; */
+  /* background: white; */
+  /* height: 20px;
+  width: 20px; */
+  left: 12px;
+  /* border-radius: 50%; */
+  margin-left: 5px;
+  animation: imagee1 1.9s forwards;
+}
+.image1{
+  top:20px;
+  /* display: none; */
+  position: absolute;
+  /* margin:10px; */
+  /* background: white; */
+  /* height: 20px;
+  width: 20px; */
+  left: 30px;
+  /* border-radius: 50%; */
+  /* margin-left: 5px; */
+  animation: imagee2 1.9s forwards;
+}
+.image2{
+  /* top:10px; */
+  /* display: none; */
+  position: absolute;
+  /* margin:10px; */
+  /* background: white; */
+  /* height: 20px;
+  width: 20px; */
+  /* left: 12px; */
+  /* border-radius: 50%; */
+  /* margin-left: 5px; */
+  margin-top: 30%;
+  animation: imagee3 1.9s forwards;
 }
