@@ -6,6 +6,7 @@ export const Div = styled.body`
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-left:10%;
 `;
 export const Image = styled.img`
   margin-top: 18%;

@@ -1,66 +1,147 @@
-body{
+body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
-@keyframes imagee1{
-  0% {top: 100px;opacity: 0; }
-  33% {top: 0px;}
-  66% {top: 0px;}
-  100% {top:0px;}
-
+@keyframes div1 {
+  0% {
+    left: 100px;
+    opacity: 0;
+  }
+  33% {
+    left: 0px;
+  }
+  66% {
+    left: 0px;
+  }
+  100% {
+    left: 0px;
+  }
 }
-@keyframes imagee2{
-  0% {top: 150px;  opacity: 0;  }
-  33% {top: 150px;opacity: 0; }
-  66% {top: 0px;}
-  100% {top:0px;}
+@keyframes imagee1 {
+  0% {
+    top: 100px;
+    opacity: 0;
+  }
+  33% {
+    top: 0px;
+  }
+  66% {
+    top: 0px;
+  }
+  100% {
+    top: 0px;
+  }
 }
-@keyframes imagee3{
-  0% {top: 200px;opacity: 0; }
-  33% {top: 200px;opacity: 0; }
-  66% {top: 200px;opacity: 0; }
-  100% {top:0px;}
+@keyframes imagee2 {
+  0% {
+    top: 150px;
+    opacity: 0;
+  }
+  33% {
+    top: 150px;
+    opacity: 0;
+  }
+  66% {
+    top: 0px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+@keyframes imagee3 {
+  0% {
+    top: 200px;
+    opacity: 0;
+  }
+  33% {
+    top: 200px;
+    opacity: 0;
+  }
+  66% {
+    top: 200px;
+    opacity: 0;
+  }
+  100% {
+    top: 0px;
+  }
 }
 @keyframes example {
-  from {left: 0px;}
-  to {left: 100px;}
+  from {
+    left: 0px;
+  }
+  to {
+    left: 100px;
+  }
 }
 @keyframes example2 {
-  from {left: 150px;}
-  to {left: 100px;}
+  from {
+    left: 150px;
+  }
+  to {
+    left: 100px;
+  }
 }
 @keyframes dot1 {
-  0% {width: 9px;height: 9px;}
-  33% {width: 15px;height: 15px;}
-  66% {width: 9px;height: 9px;}
-  100% {width: 9px;height: 9px;}
-
+  0% {
+    width: 9px;
+    height: 9px;
+  }
+  33% {
+    width: 15px;
+    height: 15px;
+  }
+  66% {
+    width: 9px;
+    height: 9px;
+  }
+  100% {
+    width: 9px;
+    height: 9px;
+  }
 }
 @keyframes dot2 {
-  0% {width: 9px;height: 9px;}
-  33% {width: 9px;height: 9px;}
-  66% {width: 15px;height: 15px;}
-  100% {width: 9px;height: 9px;}
+  0% {
+    width: 9px;
+    height: 9px;
+  }
+  33% {
+    width: 9px;
+    height: 9px;
+  }
+  66% {
+    width: 15px;
+    height: 15px;
+  }
+  100% {
+    width: 9px;
+    height: 9px;
+  }
 }
 @keyframes dot3 {
-  0% {width: 9px;height: 9px;}
-  33% {width: 9px;height: 9px;}
-  66% {width: 9px;height: 9px;}
-  100% {width: 15px;height: 15px;}
+  0% {
+    width: 9px;
+    height: 9px;
+  }
+  33% {
+    width: 9px;
+    height: 9px;
+  }
+  66% {
+    width: 9px;
+    height: 9px;
+  }
+  100% {
+    width: 15px;
+    height: 15px;
+  }
 }
-h1{
-  /* display:absolute; */
-  color: black;
-
-  /* height: 5px; */
-  /* font-size: 10px; */
+h1 {
+  color: #8bcbca;
 }
-.hh1{
-  top:10px;
-  /* display: none; */
-  /* position: absolute; */
-  /* margin:10px; */
-  background: white;
+.hh1 {
+  top: 10px;
+  background: #8bcbca;
   height: 20px;
   width: 20px;
   left: 12px;
@@ -69,76 +150,54 @@ h1{
   animation-name: dot1;
   animation-duration: 0.8s;
   animation-iteration-count: infinite;
-
 }
-.hh2{
-  top:10px;
-  /* position: absolute; */
-  background: white;
+.hh2 {
+  top: 10px;
+  background: #8bcbca;
   height: 20px;
   width: 20px;
   border-radius: 50%;
   margin-left: 5px;
-  left:25px;
+  left: 25px;
   animation-name: dot2;
   animation-duration: 0.8s;
-  /* animation-delay: 0.8s; */
   animation-iteration-count: infinite;
-
 }
-.hh3{
-  top:10px;
-  /* position: absolute; */
-  /* margin:60px; */
-  background: white;
+.hh3 {
+  top: 10px;
+  background: #8bcbca;
   height: 20px;
   width: 20px;
   border-radius: 50%;
   margin-left: 5px;
-  left:40px;
+  left: 40px;
   animation-name: dot3;
   animation-duration: 0.8s;
-  /* animation-delay: 0.8s; */
   animation-iteration-count: infinite;
-
 }
-.image{
-  /* top:10px; */
-  /* display: none; */
+.image {
   position: absolute;
-  /* margin:10px; */
-  /* background: white; */
-  /* height: 20px;
-  width: 20px; */
-  /* left: 12px; */
-  /* border-radius: 50%; */
-  /* margin-left: 5px; */
+
   animation: imagee1 1.9s forwards;
 }
-.image1{
-  /* top:20px; */
-  /* display: none; */
+.image1 {
   position: absolute;
-  /* margin:10px; */
-  /* background: white; */
-  /* height: 20px;
-  width: 20px; */
-  /* left: 30px; */
-  /* border-radius: 50%; */
-  /* margin-left: 5px; */
+
   animation: imagee2 1.9s forwards;
 }
-.image2{
-  /* top:10px; */
-  /* display: none; */
+.image2 {
   position: absolute;
-  /* margin:10px; */
-  /* background: white; */
-  /* height: 20px;
-  width: 20px; */
-  /* left: 12px; */
-  /* border-radius: 50%; */
-  /* margin-left: 5px; */
-  /* margin-top: 30%; */
+
   animation: imagee3 1.9s forwards;
+}
+.divImage {
+  animation: div1 1.9s forwards;
+}
+.userName{
+  animation: div1 1.9s forwards;
+
+}
+.yesNoButtons{
+  animation: div1 1.9s forwards;
+
 }
