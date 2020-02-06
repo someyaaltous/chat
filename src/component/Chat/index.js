@@ -87,8 +87,21 @@ class Chat extends Component {
   clickNoButton = () => {
     this.setState({ noSubimitButtin: true });
   };
+
+  newMassagesWait = (prevProps, prevState) => {
+    if (
+      this.state.newMassages.length === 5 &&
+      prevState.newMassages.length !== this.state.newMassages.length
+    ) {
+      clearInterval(this.iterval);
+      this.setState({ loading: false });
+    } else if (prevState.newMassages.length !== this.state.newMassages.length) {
+      setTimeout(() => {
+        this.setState({ loading: true });
+      }, 1000);
+    }
+  };
   render() {
-    console.log(this.state.newMassages);
 
     return (
       <>
@@ -109,13 +122,11 @@ class Chat extends Component {
                   {ele}
                 </Listmass>
               </UserDiv>
-
-              {/* <p>{this.state.valueName}</p> */}
             </>
           ))}
           {this.state.submitButton ? (
             <>
-              <Listmass backgroundColor='#aaa' fontColor='#ffffff'>
+              <Listmass backgroundColor='#aaa' fontColor='#ffffff' className='userName'>
                 {this.state.valueName}
               </Listmass>
 
@@ -139,18 +150,17 @@ class Chat extends Component {
                       </Listmass>
                     </UserDiv>
                   </>
-                ) : (
-                  null
-                )}
+                ) : null}
                 {this.state.noSubimitButtin ? (
                   <Listmass backgroundColor='#aaa' fontColor='#ffffff'>
                     nope. just the article for now please
                   </Listmass>
                 ) : null}
-                {this.state.yesSubimitButton ||
-                this.state.noSubimitButtin ? console.log('...') : (
-                  <Div>
-                    <Yesbutton onClick={this.clickYesButton}>
+                {this.state.yesSubimitButton || this.state.noSubimitButtin ? (
+                  null
+                ) : (
+                  <Div className='yesNoButtons'>
+                    <Yesbutton onClick={this.clickYesButton} >
                       sure! i'll give it a shot
                     </Yesbutton>
 
@@ -163,7 +173,7 @@ class Chat extends Component {
             </>
           ) : null}
           {this.state.allMessages.length === 3 && !this.state.submitButton ? (
-            <DivImage>
+            <DivImage className='divImage'>
               <InputButton
                 placeholder='type your name here....'
                 value={this.state.valueName}

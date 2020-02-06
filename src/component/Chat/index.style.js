@@ -4,27 +4,27 @@ export const ChatDiv = styled.div`
   justify-content:center;
   align-items:center;
 flex-direction:column;
+margin-left:33.5%;
 
 `;
 export const Container = styled.div`
   width: 100%;
   height: 100px;
-  /* display: flex;
-  text-align: center; */
+  
 `;
 
 export const Threepoint = styled.div`
-  width: 5%;
-  height: 30px;
+display:flex;
+justify-content:center;
+
+  width: 12%;
+  height: 27px;
   display: flex;
-  background: #205c8b;
-  border: 1px solid #205c8b;
-  border-radius: 55px;
-  color: #ffff;
-  text-align: center;
-  border-bottom-left-radius: 0px;
+  background: #0000;
   margin-left: 1%;
   margin-top: 5%;
+  box-shadow: 3px 5px 8px #cccccc;
+  padding-top:3%;
 `;
 
 export const Div = styled.div`
@@ -42,7 +42,7 @@ export const Yesbutton = styled.button`
   color: white;
   border: none;
   border-radius: 5px;
-  user-select: none;
+  outline: none;
 `;
 export const Nobutton = styled.button`
   background-color: white;
@@ -53,7 +53,7 @@ export const Nobutton = styled.button`
   padding:25px;
   border-radius: 5px;
   margin-left: 1%;
-  user-select: none;
+  outline: none;
 `;
 export const Listmass = styled.p`
   width: auto;
@@ -67,33 +67,38 @@ export const Listmass = styled.p`
 
   text-align: center;
   font-size: 0.9em;
-  /* padding-top: 1%;
-  margin-left: 3%; */
+
   padding: 25px;
 `;
 export const UserDiv = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
-  /* margin-top: 4%;
-  margin-left: 4%; */
+  
   animation: example 2s forwards;
 `;
 export const InputButton = styled.input`
   border: 0px;
   border-bottom: 2px solid #8bcbca;
-  /* margin: 6% auto 6% auto; */
+ width:30%;
   font-size: 1.2em;
   padding: 10px;
+  outline: none;
+
 `;
 export const ImageInput = styled.input`
   width: 3%;
   height: 30px;
   border-radius: 5px;
   user-select: none;
+  margin-top:2%;
+  z-index:1;
+  outline: none;
+
 `;
 export const DivImage = styled.div`
   width: 100%;
   display: flex;
+  margin-left:45%;
 `;
 
