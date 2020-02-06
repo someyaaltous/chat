@@ -3,6 +3,22 @@ body {
   padding: 0;
   overflow-x: hidden;
 }
+@keyframes div2{
+  0% {
+    left: 100px;
+    opacity: 0;
+  }
+  33% {
+    left: 0px;
+  }
+  66% {
+    left: 0px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+
 @keyframes div1 {
   0% {
     left: 100px;
@@ -194,10 +210,19 @@ h1 {
   animation: div1 1.9s forwards;
 }
 .userName{
-  animation: div1 1.9s forwards;
+  animation: div1 1.8s forwards;
 
 }
 .yesNoButtons{
-  animation: div1 1.9s forwards;
+  animation: div2 1.8s forwards;
+
+}
+.sure{
+  animation: div1 1.8s forwards;
+
+
+}
+.nope{
+  animation: div1 1.8s forwards;
 
 }
