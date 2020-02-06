@@ -1,10 +1,9 @@
 import React from 'react';
 import './App.css';
-import Chat from './component/Chat'
-import Live from './component/Live'
+import Home from './layout/Home'
 function App() {
   return (
-   <Live/>
+   <Home/>
   );
 }
 
