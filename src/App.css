@@ -58,7 +58,7 @@ h1{
 .hh1{
   top:10px;
   /* display: none; */
-  position: absolute;
+  /* position: absolute; */
   /* margin:10px; */
   background: white;
   height: 20px;
@@ -73,7 +73,7 @@ h1{
 }
 .hh2{
   top:10px;
-  position: absolute;
+  /* position: absolute; */
   background: white;
   height: 20px;
   width: 20px;
@@ -88,7 +88,7 @@ h1{
 }
 .hh3{
   top:10px;
-  position: absolute;
+  /* position: absolute; */
   /* margin:60px; */
   background: white;
   height: 20px;

@@ -8,15 +8,11 @@ class Live extends Component {
     return (
       <>
         <Div>
-          {/* <div className='image'> */}
-            <Image2 src={bubble2} className='image' />
-          {/* </div>
-          <div className='image1'> */}
-            <Image src={bubble1} className='image1'/>
-          {/* </div> */}
-          {/* <div className='image2'> */}
-            <Image3 src={bubble3} className='image2'/>
-          {/* </div> */}
+          <Image2 src={bubble2} className='image' />
+
+          <Image src={bubble1} className='image1' />
+
+          <Image3 src={bubble3} className='image2' />
         </Div>
       </>
     );
