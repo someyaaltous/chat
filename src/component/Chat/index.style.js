@@ -29,19 +29,18 @@ justify-content:center;
 
 export const Div = styled.div`
   width: 100%;
-  margin-top: 11%;
-  margin-left: 19%;
+  margin-top: 4%;
   animation: example2 2s forwards;
 `;
 export const Yesbutton = styled.button`
   width: auto;
   height:auto;
-  padding:25px;
+  padding:20px;
   font-size: 1em;
   background-color: #8bcbca;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   outline: none;
 `;
 export const Nobutton = styled.button`
@@ -50,19 +49,17 @@ export const Nobutton = styled.button`
   border: 2px solid #8bcbca;
   width: auto;
   height: auto;
-  padding:25px;
-  border-radius: 5px;
+  padding:20px;
+  border-radius: 10px;
   margin-left: 1%;
   outline: none;
 `;
 export const Listmass = styled.p`
   width: auto;
   height: auto;
-  /* background: #e5e5e5; */
   background: ${props => props.backgroundColor};
 
   border-radius: 15px;
-  /* color: #000000; */
   color: ${props => props.fontColor};
 
   text-align: center;

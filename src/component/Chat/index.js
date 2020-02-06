@@ -27,7 +27,8 @@ class Chat extends Component {
     submitButton: false,
     newMassages: [],
     yesSubimitButton: false,
-    noSubimitButtin: false
+    noSubimitButtin: false,
+    newloading: true
   };
   iterval;
 
@@ -60,23 +61,52 @@ class Chat extends Component {
         this.setState({ loading: true });
       }, 1000);
     }
+    if (
+      this.state.newMassages.length === 5 &&
+      prevState.newMassages.length !== this.state.newMassages.length
+    ) {
+      clearInterval(this.iterval);
+    } else if (prevState.newMassages.length !== this.state.newMassages.length) {
+      setTimeout(() => {
+        this.setState({ newloading: true });
+      }, 1000);
+    }
   }
   changeInput = ({ target: { value, name } }) => {
     this.setState({ [name]: value });
   };
   handleSubmit = event => {
     event.preventDefault();
+    const newMassages = [
+      `Nice to virtually meet you, ${this.state.valueName}`,
+      'This is an interactive article. Ill add some “writers cut” commentary and provide a bit of banter throughout the article.',
+      'By the way, you can toggle the conversation on and off whenever you like.',
+      'Just click the little blue button in the bottom right-hand corner if you want me to shut up.',
+      'Thanks for experimenting with us and enjoy the ride. Shall we?'
+    ];
     if (this.state.valueName !== '') {
-      this.setState({
-        submitButton: true,
-        newMassages: [
-          `Nice to virtually meet you, ${this.state.valueName}`,
-          'This is an interactive article. Ill add some “writers cut” commentary and provide a bit of banter throughout the article.',
-          'By the way, you can toggle the conversation on and off whenever you like.',
-          'Just click the little blue button in the bottom right-hand corner if you want me to shut up.',
-          'Thanks for experimenting with us and enjoy the ride. Shall we?'
-        ]
-      });
+      this.setState(
+        {
+          submitButton: true
+        },
+        () => {
+          let i = 0;
+          setTimeout(() => {
+            this.setState({ newloading: true });
+          }, 1000);
+          this.iterval = setInterval(() => {
+            this.setState(
+              {
+                newMassages: [...this.state.newMassages, newMassages[i]],
+                newloading: false
+              },
+              () => {
+                i++;
+              }
+            );
+          }, 2500);
+        }
+      );
     } else {
       this.setState({ submitButton: false });
     }
@@ -87,34 +117,10 @@ class Chat extends Component {
   clickNoButton = () => {
     this.setState({ noSubimitButtin: true });
   };
-
-  newMassagesWait = (prevProps, prevState) => {
-    if (
-      this.state.newMassages.length === 5 &&
-      prevState.newMassages.length !== this.state.newMassages.length
-    ) {
-      clearInterval(this.iterval);
-      this.setState({ loading: false });
-    } else if (prevState.newMassages.length !== this.state.newMassages.length) {
-      setTimeout(() => {
-        this.setState({ loading: true });
-      }, 1000);
-    }
-  };
   render() {
-
     return (
       <>
         <ChatDiv>
-          <Container>
-            {this.state.loading && (
-              <Threepoint>
-                <div className='hh1'></div>
-                <div className='hh2'></div>
-                <div className='hh3'></div>
-              </Threepoint>
-            )}
-          </Container>
           {this.state.allMessages.map(ele => (
             <>
               <UserDiv>
@@ -126,7 +132,11 @@ class Chat extends Component {
           ))}
           {this.state.submitButton ? (
             <>
-              <Listmass backgroundColor='#aaa' fontColor='#ffffff' className='userName'>
+              <Listmass
+                backgroundColor='#aaa'
+                fontColor='#ffffff'
+                className='userName'
+              >
                 {this.state.valueName}
               </Listmass>
 
@@ -137,6 +147,15 @@ class Chat extends Component {
                   </Listmass>
                 </UserDiv>
               ))}
+              <Container>
+                {this.state.newloading && (
+                  <Threepoint>
+                    <div className='hh1'></div>
+                    <div className='hh2'></div>
+                    <div className='hh3'></div>
+                  </Threepoint>
+                )}
+              </Container>
               <>
                 {this.state.yesSubimitButton ? (
                   <>
@@ -156,22 +175,37 @@ class Chat extends Component {
                     nope. just the article for now please
                   </Listmass>
                 ) : null}
-                {this.state.yesSubimitButton || this.state.noSubimitButtin ? (
-                  null
-                ) : (
-                  <Div className='yesNoButtons'>
-                    <Yesbutton onClick={this.clickYesButton} >
+                {(this.state.newMassages.length === 5 ||
+                  this.state.noSubimitButtin) ||
+                this.state.yesSubimitButton ? (
+                  <Div>
+                    <Yesbutton
+                      onClick={this.clickYesButton}
+                      className='yesNoButtons'
+                    >
                       sure! i'll give it a shot
                     </Yesbutton>
 
-                    <Nobutton onClick={this.clickNoButton}>
+                    <Nobutton
+                      onClick={this.clickNoButton}
+                      className='yesNoButtons'
+                    >
                       nope. just the article for now please
                     </Nobutton>
                   </Div>
-                )}
+                ) : null}
               </>
             </>
           ) : null}
+          <Container>
+            {this.state.loading && (
+              <Threepoint>
+                <div className='hh1'></div>
+                <div className='hh2'></div>
+                <div className='hh3'></div>
+              </Threepoint>
+            )}
+          </Container>
           {this.state.allMessages.length === 3 && !this.state.submitButton ? (
             <DivImage className='divImage'>
               <InputButton
